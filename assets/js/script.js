@@ -25,7 +25,7 @@ function onSubmitClicked() {
     return;
   }
   errorMsg.innerHTML = "";
-  removeValidMarker();
+
   var siteObj = {
     site_name: siteName.value,
     site_url: siteUrl.value,
@@ -37,8 +37,8 @@ function onSubmitClicked() {
   siteName.value = "";
   siteUrl.value = "";
 
-  siteName.classList.remove("is-valid", "is-invalid");
-  siteUrl.classList.remove("is-valid", "is-invalid");
+  //   siteName.classList.remove("is-valid", "is-invalid");
+  //   siteUrl.classList.remove("is-valid", "is-invalid");
 }
 function displayTable(sites) {
   var tableBody = "";
