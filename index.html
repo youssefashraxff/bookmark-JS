@@ -15,6 +15,65 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
+    <div
+      class="container d-flex justify-content-center align-items-center flex-column"
+    >
+      <header class="text-center my-5">
+        <h1 class="text-dark-grey title fw-bolder">Bookmarker</h1>
+      </header>
+      <div class="bookmarker-body py-4">
+        <h2 class="gradient-title">
+          <i class="fa-solid fa-bookmark"></i>
+          Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h2>
+      </div>
+      <div
+        class="input-sec w-100 d-flex flex-column justify-content-center align-items-center"
+      >
+        <div class="site-name form-floating w-100 my-2"">
+          <input
+            type="text"
+            id="site-name"
+            class="form-text form-control w-100"
+            placeholder="Site Name"
+            oninput="isValidSiteName(this)"
+          />
+          <label for="site-name">Site Name</label>
+        </div>
+        <div class="url form-floating w-100 my-2">
+          <input
+            type="text"
+            id="site-url"
+            class="form-text form-control w-100"
+            placeholder="Website URL"
+            oninput="isValidSiteUrl(this)"
+          />
+          <label for="site-name">Website URL</label>
+        </div>
+        <p id="error-msg" class="mb-0 text-danger"></p>
+        <button
+          onclick="onSubmitClicked()"
+          class="btn btn-warning w-25 my-4 text-white"
+        >
+          Submit
+        </button>
+      </div>
+      <div class="table-sec w-100 rounded">
+        <table class="table text-center">
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Website Name</th>
+              <th>Visit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="table-container"></tbody>
+        </table>
+      </div>
+    </div>
+
     <!-- JS Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -28,5 +87,9 @@
     ></script>
     <!-- Script JS -->
     <script src="./assets/js/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a6e81a47c0.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
